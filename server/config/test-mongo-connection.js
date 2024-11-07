@@ -1,12 +1,9 @@
-// Load environment variables from .env file
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config()
-}
+require('dotenv').config()
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 // Replace the placeholder with your Atlas connection string
-const uri = process.env.MONGODB_URI //|| "mongodb+srv://alderdeveloper:JTUE9XdNeorrg8rp@revplancluster.wh4fn.mongodb.net/?retryWrites=true&w=majority&appName=RevPlanCluster";
+const uri = process.env.MONGODB_URI
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri,  {
